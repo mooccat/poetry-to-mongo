@@ -41,7 +41,7 @@ authorFiles.forEach(function (authorFile) {
 })
 
 Promise.all(authorPromise).then(function(){
-    console.log("done")
+    console.log("作者数据库保存完毕")
     let poetryLen = poetryFiles.length
     let index = 0;
     function readFileToMongo(){
@@ -56,12 +56,12 @@ Promise.all(authorPromise).then(function(){
             poetryPromise.push(poetry.save())
         })
         Promise.all(poetryPromise).then(function(){
-            console.log(index+"done")
+            console.log("第"+index+"首诗保存完毕")
             index++
             if(index<poetryLen){
                 readFileToMongo()
             }else{
-                console.log("all done")
+                console.log("执行完毕，ctrl+c退出")
             }
         })
     }
