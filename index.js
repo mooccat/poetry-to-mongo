@@ -37,14 +37,16 @@ let savePoetry = function (basePath) {
                 var author = new Author({
                     name: author.name,
                     desc: author.desc,
+                    sort:'诗',
                     decade: authorFile.indexOf("tang") > -1 ? "tang" : "song"
                 })
                 authorPromise.push(author.save())
             }else{
-                var author = new AuthorCi({
+                var author = new Author({
                     name: author.name,
                     desc: author.description,
                     short_desc:author.short_description,
+                    sort:'词',
                     decade: authorFile.indexOf("tang") > -1 ? "tang" : "song"
                 })
                 authorPromise.push(author.save())
