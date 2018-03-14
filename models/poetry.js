@@ -6,6 +6,7 @@ let PoetrySchema = new Schema({
     "strains": [],
     "author": String,
     "sort":String,
+    "decade":String,
     "paragraphs": [],
     "title": String
 })
