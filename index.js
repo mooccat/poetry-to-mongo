@@ -1,5 +1,4 @@
 let Author = require("./models/author")
-let AuthorCi = require("./models/author_ci")
 let Poetry = require("./models/poetry")
 
 let mongoose = require('mongoose');
